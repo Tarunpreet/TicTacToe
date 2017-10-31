@@ -205,6 +205,22 @@ public class PlayActivity extends AppCompatActivity
 
                     return 1;
                 } else if (board[0][i] =='o') {
+                        if(i==0)
+                        {
+                            Line=(ImageView)findViewById(R.id.line);
+                            Line.setAlpha(1.0f);
+                        }
+                        else if(i==1)
+                        {
+                            Line=(ImageView)findViewById(R.id.line1);
+                            Line.setAlpha(1.0f);
+                        }
+                        else if(i==2)
+                        {
+                            Line=(ImageView)findViewById(R.id.line2);
+
+                            Line.setAlpha(1.0f);
+                        }
                     return 2;
                 }
             }
