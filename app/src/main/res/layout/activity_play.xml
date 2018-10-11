@@ -17,35 +17,6 @@
         <!--android:layout_weight="1"-->
         <!--app:srcCompat="@drawable/line1" />-->
 
-    <ImageView
-        android:id="@+id/line2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="297dp"
-        android:layout_marginTop="80dp"
-        android:layout_weight="1"
-        android:alpha="0"
-        app:srcCompat="@drawable/line" />
-
-    <ImageView
-        android:id="@+id/line1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="185dp"
-        android:layout_marginTop="80dp"
-        android:layout_weight="1"
-        android:alpha="0"
-        app:srcCompat="@drawable/line" />
-
-    <ImageView
-        android:id="@+id/line"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="74dp"
-        android:layout_marginTop="80dp"
-        android:alpha="0"
-        app:srcCompat="@drawable/line" />
-
     <LinearLayout
         android:layout_width="390dp"
         android:layout_height="match_parent"

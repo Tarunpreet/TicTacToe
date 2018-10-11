@@ -26,7 +26,6 @@ public class PlayActivity extends AppCompatActivity
     TextView pl2;
     TextView sc1;
     TextView sc2;
-    ImageView Line;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -56,7 +55,7 @@ public class PlayActivity extends AppCompatActivity
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                reStart();
+                reset();
             }
         });
 
@@ -132,7 +131,7 @@ public class PlayActivity extends AppCompatActivity
         else
 
         {
-            reStart();
+            reset();
             won=3;
         }
 
@@ -187,40 +186,9 @@ public class PlayActivity extends AppCompatActivity
         for (int i = 0; i <= 2; i++) {
             if (board[0][i] == board[1][i] && board[0][i] == board[2][i]) {
                 if (board[0][i] =='x') {
-                    if(i==0)
-                    {
-                        Line=(ImageView)findViewById(R.id.line);
-                        Line.setAlpha(1.0f);
-                    }
-                    else if(i==1)
-                    {
-                        Line=(ImageView)findViewById(R.id.line1);
-                        Line.setAlpha(1.0f);
-                    }
-                    else if(i==2)
-                    {
-                        Line=(ImageView)findViewById(R.id.line2);
-                        Line.setAlpha(1.0f);
-                    }
 
                     return 1;
                 } else if (board[0][i] =='o') {
-                        if(i==0)
-                        {
-                            Line=(ImageView)findViewById(R.id.line);
-                            Line.setAlpha(1.0f);
-                        }
-                        else if(i==1)
-                        {
-                            Line=(ImageView)findViewById(R.id.line1);
-                            Line.setAlpha(1.0f);
-                        }
-                        else if(i==2)
-                        {
-                            Line=(ImageView)findViewById(R.id.line2);
-
-                            Line.setAlpha(1.0f);
-                        }
                     return 2;
                 }
             }
@@ -251,7 +219,7 @@ public class PlayActivity extends AppCompatActivity
         }
         return 0;
     }
-    public void reStart()
+    public void reset()
     {
         for (int i = 0; i < 9; i++)
         {
@@ -281,7 +249,6 @@ public class PlayActivity extends AppCompatActivity
             ((ImageView) linear3.getChildAt(i)).setImageResource(R.drawable.icon);
         }
       setbackground();
-        Line.setAlpha(0.0f);
     }
 
 }
